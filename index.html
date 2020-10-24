@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>14.2 tag Finder</title>
+  <!--  <link rel="manifest" href="./manifest.json">-->
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/normalize.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta charset="utf-8">
+    <meta name="theme-color" content="black">
+</head>
+
+<body>
+
+<!-- show loader while site load -->
+<div id="cube-loader">
+    <div class="caption">
+        <div class="cube-loader">
+            <div class="cube loader-1"></div>
+            <div class="cube loader-2"></div>
+            <div class="cube loader-4"></div>
+            <div class="cube loader-3"></div>
+        </div>
+    </div>
+</div>
+
+<!-- show used storage -->
+<div class="storage">
+    <span class="storageHeader">Storage used</span>
+    <div class="borderStorage">
+        <div id="usedStorageLine"></div>
+    </div>
+    <span id="usedStorageInfo"></span>
+</div>
+
+<!--main container for main buttons and gallery-->
+<div id="main-container">
+
+    <!-- here finder -->
+    <div class="header">
+        <input id="finder" placeholder="Enter name..." type="text">
+    </div>
+
+    <div class="border"></div>
+
+    <div class="container-gallery">
+
+        <!-- main buttons -->
+        <div class="nav">
+            <div class="nav-buttons">
+                <div class="button" title="Add photo" id="add">
+                    <img src="images/add.svg" alt="add">
+                    <input id='addPhoto' type="file"/>
+                </div>
+                <div class="button" title="Show all photos" id="photos"><img src="images/photos.svg" alt="photos"></div>
+                <div class="button" title="Download all photos as zip" id="downloadAll">
+                    <img src="images/download.svg" alt="download"></div>
+                <div class="button" title="Delete all photos" id="deleteAll"><img src="images/remove.svg" alt="tags">
+                </div>
+                <div class="button" title="Show tags" id="showTags"><img src="images/tags.svg" alt="tags"></div>
+            </div>
+            <!-- tags panel -->
+            <div class="tagsPanel" id="tagsPanel">
+                <div id="addTag"><img src="./images/add.svg" title="Add tag" alt="add tag"><span>ADD</span></div>
+                <div id="tags"></div>
+            </div>
+        </div>
+
+        <!-- container for images -->
+        <div id="containerImages">
+            <div id="tagHeader"></div>
+            <div id="root"></div>
+        </div>
+
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/exif-js/2.3.0/exif.min.js"
+        integrity="sha512-xsoiisGNT6Dw2Le1Cocn5305Uje1pOYeSzrpO3RD9K+JTpVH9KqSXksXqur8cobTEKJcFz0COYq4723mzo88/Q=="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
+        integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.5.0/jszip.min.js"
+        integrity="sha512-y3o0Z5TJF1UsKjs/jS2CDkeHN538bWsftxO9nctODL5W40nyXIbs0Pgyu7//icrQY9m6475gLaVr39i/uh/nLA=="
+        crossorigin="anonymous"></script>
+<script type="module" src="./src/index.js"></script>
+</body>
+
+</html>
+
+
